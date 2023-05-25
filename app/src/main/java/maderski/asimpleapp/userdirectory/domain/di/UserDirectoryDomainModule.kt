@@ -1,0 +1,39 @@
+package maderski.asimpleapp.userdirectory.domain.di
+
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import maderski.asimpleapp.userdirectory.domain.mappers.AddressToAddressModelMapper
+import maderski.asimpleapp.userdirectory.domain.mappers.CompanyToCompanyModelMapper
+import maderski.asimpleapp.userdirectory.domain.mappers.GeoToLatLngModelMapper
+import maderski.asimpleapp.userdirectory.domain.mappers.UserToUserModelMapper
+import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
+import maderski.asimpleapp.userdirectory.domain.repository.UserRepositoryImpl
+import maderski.asimpleapp.userdirectory.service.UserService
+
+@Module
+@InstallIn(UserDirectoryComponent::class)
+class UserDirectoryDomainModule {
+    @Provides
+    fun provideCompanyModelMapper() = CompanyToCompanyModelMapper()
+
+    @Provides
+    fun provideLatLngModelMapper() = GeoToLatLngModelMapper()
+
+    @Provides
+    fun provideAddressModelMapper(
+        latLngModelMapper: GeoToLatLngModelMapper,
+    ) = AddressToAddressModelMapper(latLngModelMapper)
+
+    @Provides
+    fun provideUserModelMapper(
+        companyModelMapper: CompanyToCompanyModelMapper,
+        addressModelMapper: AddressToAddressModelMapper,
+    ) = UserToUserModelMapper(companyModelMapper, addressModelMapper)
+
+    @Provides
+    fun provideUserRepository(
+        userService: UserService,
+        userModelMapper: UserToUserModelMapper,
+    ): UserRepository = UserRepositoryImpl(userService, userModelMapper)
+}
