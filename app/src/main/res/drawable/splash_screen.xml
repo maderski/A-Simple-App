@@ -8,6 +8,6 @@
     <item
         android:width="64dp"
         android:height="64dp"
-        android:drawable="@drawable/white_logo"
+        android:drawable="@drawable/rocket"
         android:gravity="center" />
 </layer-list>
