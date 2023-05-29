@@ -9,7 +9,7 @@ import maderski.asimpleapp.userdirectory.domain.mappers.GeoToLatLngModelMapper
 import maderski.asimpleapp.userdirectory.domain.mappers.UserToUserModelMapper
 import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
 import maderski.asimpleapp.userdirectory.domain.repository.UserRepositoryImpl
-import maderski.asimpleapp.userdirectory.service.UserService
+import maderski.asimpleapp.userdirectory.service.UserApi
 
 @Module
 @InstallIn(UserDirectoryComponent::class)
@@ -33,7 +33,7 @@ class UserDirectoryDomainModule {
 
     @Provides
     fun provideUserRepository(
-        userService: UserService,
+        userApi: UserApi,
         userModelMapper: UserToUserModelMapper,
-    ): UserRepository = UserRepositoryImpl(userService, userModelMapper)
+    ): UserRepository = UserRepositoryImpl(userApi, userModelMapper)
 }

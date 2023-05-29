@@ -1,15 +1,15 @@
-package maderski.asimpleapp.userdirectory.presentation.views
+package maderski.asimpleapp.userdirectory.presentation.userlist
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun UserDetailsScreen() {
+fun UserListScreen() {
 
 }
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewUserDetailsScreen() {
+fun PreviewUserListScreen() {
 
 }

@@ -4,7 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import maderski.asimpleapp.userdirectory.domain.mappers.UserToUserModelMapper
 import maderski.asimpleapp.userdirectory.domain.models.UserModel
-import maderski.asimpleapp.userdirectory.service.UserService
+import maderski.asimpleapp.userdirectory.service.UserApi
 import javax.inject.Inject
 
 interface UserRepository {
@@ -13,13 +13,13 @@ interface UserRepository {
 }
 
 class UserRepositoryImpl @Inject constructor(
-    private val userService: UserService,
+    private val userApi: UserApi,
     private val userModelMapper: UserToUserModelMapper
 ) : UserRepository {
     override suspend fun getAllUsers(): Result<Set<UserModel>> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = userService.fetchUsers()
+                val response = userApi.fetchUsers()
                 val userList = response.body()
                 if (response.isSuccessful && userList != null) {
                     val userModelSet = userList.mapNotNull { user ->
@@ -38,7 +38,7 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun getUser(id: Int): Result<UserModel> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = userService.fetchUser(id)
+                val response = userApi.fetchUser(id)
                 val user = userModelMapper(response.body())
                 if (response.isSuccessful && user != null) {
                     Result.success(user)

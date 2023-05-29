@@ -1,8 +1,9 @@
 package maderski.asimpleapp.userdirectory.navigation
 
-sealed class Screen(val route: String) {
-    object UserListScreen : Screen("user_list")
-    object UserDetailScreen : Screen("user_detail")
+sealed class UserScreen(val route: String) {
+    object UserListScreen : UserScreen("user_list")
+    object UserDetailScreen : UserScreen("user_detail")
+    object UserLocationScreen : UserScreen("user_location")
 
     fun withArgs(vararg args: String): String {
         return buildString {
