@@ -41,7 +41,7 @@ fun Navigation() {
                 locationLng = entry.arguments?.getString("lng"),
             )
             BackHandler(enabled = true) {
-                navController.navigate(ScreenNav.UserDetailScreen.route)
+                navController.navigate(ScreenNav.UserListScreen.route)
             }
         }
     }

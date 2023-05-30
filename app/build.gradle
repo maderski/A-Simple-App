@@ -20,6 +20,15 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        def localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            Properties localProperties = new Properties()
+            localProperties.load(localPropertiesFile.newDataInputStream())
+            manifestPlaceholders = [
+                    MAPS_API_KEY: localProperties.getProperty("MAPS_API_KEY")
+            ]
+        }
     }
 
     buildTypes {
@@ -61,6 +70,7 @@ dependencies {
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
+    implementation "com.google.maps.android:maps-compose:1.0.0"
     // Compose Navigation
     implementation "androidx.navigation:navigation-compose:2.5.3"
     // Coroutines
