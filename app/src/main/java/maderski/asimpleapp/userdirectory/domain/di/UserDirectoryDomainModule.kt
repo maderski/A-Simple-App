@@ -3,6 +3,7 @@ package maderski.asimpleapp.userdirectory.domain.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 import maderski.asimpleapp.userdirectory.domain.mappers.AddressToAddressModelMapper
 import maderski.asimpleapp.userdirectory.domain.mappers.CompanyToCompanyModelMapper
 import maderski.asimpleapp.userdirectory.domain.mappers.GeoToLatLngModelMapper
@@ -12,7 +13,7 @@ import maderski.asimpleapp.userdirectory.domain.repository.UserRepositoryImpl
 import maderski.asimpleapp.userdirectory.service.UserApi
 
 @Module
-@InstallIn(UserDirectoryComponent::class)
+@InstallIn(ViewModelComponent::class)
 class UserDirectoryDomainModule {
     @Provides
     fun provideCompanyModelMapper() = CompanyToCompanyModelMapper()
