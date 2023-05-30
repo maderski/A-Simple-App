@@ -23,7 +23,7 @@ fun UrlImageWithDefaultComponent(
             modifier = modifier,
             model = imageUrl,
             contentDescription = null,
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Fit
         )
     } else {
         val context = LocalContext.current
@@ -34,7 +34,7 @@ fun UrlImageWithDefaultComponent(
                 defaultImage
             ).asImageBitmap(),
             contentDescription = null,
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Fit
         )
     }
 }

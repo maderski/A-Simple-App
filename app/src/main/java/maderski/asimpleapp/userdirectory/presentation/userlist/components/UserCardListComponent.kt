@@ -14,7 +14,7 @@ fun UserCardListComponent(
 ) {
     LazyColumn(modifier = modifier) {
         items(cardDataList) { userCardData ->
-
+            UserCardComponent(data = userCardData)
         }
     }
 }
@@ -26,35 +26,35 @@ fun PreviewUserCardListComponent() {
         UserCardData(
             id = 1,
             name = "John Doe",
-            email = "doe@mail.com",
+            companyName = "Create Stuff, Inc.",
             imageUrl = null,
             onClick = {},
         ),
         UserCardData(
             id = 2,
             name = "John Doe 2",
-            email = "doe@mail.com",
+            companyName = "Create Stuff, Inc.",
             imageUrl = null,
             onClick = {},
         ),
         UserCardData(
             id = 3,
             name = "John Doe 3",
-            email = "doe@mail.com",
+            companyName = "Create Stuff, Inc.",
             imageUrl = null,
             onClick = {},
         ),
         UserCardData(
             id = 4,
             name = "John Doe 4",
-            email = "doe@mail.com",
+            companyName = "Create Stuff, Inc.",
             imageUrl = null,
             onClick = {},
         ),
         UserCardData(
             id = 5,
             name = "John Doe 5",
-            email = "doe@mail.com",
+            companyName = "Create Stuff, Inc.",
             imageUrl = null,
             onClick = {},
         )
