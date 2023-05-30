@@ -4,7 +4,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun UserMapLocationScreen() {
+fun UserMapLocationScreen(
+    companyName: String?,
+    locationLat: String?,
+    locationLng: String?,
+) {
 
 }
 

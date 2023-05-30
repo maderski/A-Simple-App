@@ -1,5 +1,6 @@
 package maderski.asimpleapp.navigation
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -27,9 +28,21 @@ fun Navigation() {
             )
         ) { entry ->
             UserDetailsScreen(userId = entry.arguments?.getString("id"), navController = navController)
+            BackHandler(enabled = true) {
+                navController.navigate(ScreenNav.UserListScreen.route)
+            }
         }
-        composable(ScreenNav.UserLocationScreen.route) {
-            UserMapLocationScreen()
+        composable(
+            route = ScreenNav.UserLocationScreen.route + "/{companyName}/{lat}/{lng}"
+        ) { entry ->
+            UserMapLocationScreen(
+                companyName = entry.arguments?.getString("companyName"),
+                locationLat = entry.arguments?.getString("lat"),
+                locationLng = entry.arguments?.getString("lng"),
+            )
+            BackHandler(enabled = true) {
+                navController.navigate(ScreenNav.UserDetailScreen.route)
+            }
         }
     }
 }
