@@ -27,7 +27,7 @@ fun UserMapLocationScreen(
     if (lat != null && lng != null) {
         val companyLocation = LatLng(lat, lng)
         val cameraPositionState = rememberCameraPositionState {
-            position = CameraPosition.fromLatLngZoom(companyLocation, 10f)
+            position = CameraPosition.fromLatLngZoom(companyLocation, 5f)
         }
         GoogleMap(
             modifier = Modifier.fillMaxSize(),

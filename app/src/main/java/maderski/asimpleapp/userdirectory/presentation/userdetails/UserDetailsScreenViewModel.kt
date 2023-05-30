@@ -11,6 +11,7 @@ import maderski.asimpleapp.navigation.NavigationEvent
 import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userdetails.mappers.UserModelToUserDetailsDataMapper
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDetailsData
+import maderski.asimpleapp.userdirectory.presentation.userdetails.models.ViewLocationClickedData
 import javax.inject.Inject
 
 @HiltViewModel
@@ -53,23 +54,20 @@ class UserDetailsScreenViewModel @Inject constructor(
         }
     }
 
-    private fun onViewLocationClick(
-        userId: String,
-        companyName: String,
-        latitude: String?,
-        longitude: String?
-    ) {
-        if (latitude != null && longitude != null) {
-            navEvent.value = NavigationEvent.ToUserMapLocation(
-                userId = userId,
-                companyName = companyName,
-                latitude = latitude,
-                longitude = longitude,
-            )
-        } else {
-            showErrorScreen(
-                "Latitude and/or Longitude cannot be Null! Lat: $latitude Lng: $longitude"
-            )
+    private fun onViewLocationClick(data: ViewLocationClickedData) {
+        with (data) {
+            if (latitude != null && longitude != null) {
+                navEvent.value = NavigationEvent.ToUserMapLocation(
+                    userId = userId,
+                    companyName = companyName,
+                    latitude = latitude,
+                    longitude = longitude,
+                )
+            } else {
+                showErrorScreen(
+                    "Latitude and/or Longitude cannot be Null! Lat: $latitude Lng: $longitude"
+                )
+            }
         }
     }
 

@@ -3,15 +3,13 @@ package maderski.asimpleapp.userdirectory.presentation.userdetails.mappers
 import maderski.asimpleapp.userdirectory.domain.models.AddressModel
 import maderski.asimpleapp.userdirectory.domain.models.UserModel
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDetailsData
+import maderski.asimpleapp.userdirectory.presentation.userdetails.models.ViewLocationClickedData
 
 class UserModelToUserDetailsDataMapper {
     operator fun invoke(
         userModel: UserModel,
         onViewLocationClick: (
-            userId: String,
-            companyName: String,
-            latitude: String?,
-            longitude: String?
+            data: ViewLocationClickedData
         ) -> Unit
     ) : UserDetailsData =
         UserDetailsData(

@@ -28,6 +28,7 @@ import maderski.asimpleapp.userdirectory.presentation.userdetails.UserDetailsScr
 import maderski.asimpleapp.userdirectory.presentation.userdetails.components.UserDetailsInfoComponent
 import maderski.asimpleapp.userdirectory.presentation.userdetails.components.UserImageCircleComponent
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDetailsData
+import maderski.asimpleapp.userdirectory.presentation.userdetails.models.ViewLocationClickedData
 
 @Composable
 fun UserDetailsScreen(
@@ -104,10 +105,12 @@ private fun UserDetailsScreenContent(
                 isEnabled = data.isViewLocationCTAEnabled
             ) {
                 data.onViewLocationClick.invoke(
-                    data.userId,
-                    data.businessName,
-                    data.locationLat,
-                    data.locationLng
+                    ViewLocationClickedData(
+                        data.userId,
+                        data.businessName,
+                        data.locationLat,
+                        data.locationLng,
+                    )
                 )
             }
         }
@@ -134,7 +137,7 @@ fun PreviewUserDetailsScreenContent() {
             locationLat = null,
             isViewLocationCTAEnabled = true,
             viewLocationCTAText = "View on Map",
-            onViewLocationClick = { _, _, _, _ -> }
+            onViewLocationClick = {}
         )
     )
 }

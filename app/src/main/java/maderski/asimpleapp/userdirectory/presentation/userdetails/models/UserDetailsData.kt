@@ -16,10 +16,5 @@ data class UserDetailsData(
     val imageUrl: String?,
     val viewLocationCTAText: String,
     val isViewLocationCTAEnabled: Boolean,
-    val onViewLocationClick: (
-        userId: String,
-        companyName: String,
-        latitude: String?,
-        longitude: String?
-    ) -> Unit,
+    val onViewLocationClick: (data: ViewLocationClickedData) -> Unit,
 )
