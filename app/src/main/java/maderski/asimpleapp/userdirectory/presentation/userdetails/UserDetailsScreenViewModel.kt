@@ -53,9 +53,15 @@ class UserDetailsScreenViewModel @Inject constructor(
         }
     }
 
-    private fun onViewLocationClick(companyName: String, latitude: String?, longitude: String?) {
+    private fun onViewLocationClick(
+        userId: String,
+        companyName: String,
+        latitude: String?,
+        longitude: String?
+    ) {
         if (latitude != null && longitude != null) {
             navEvent.value = NavigationEvent.ToUserMapLocation(
+                userId = userId,
                 companyName = companyName,
                 latitude = latitude,
                 longitude = longitude,

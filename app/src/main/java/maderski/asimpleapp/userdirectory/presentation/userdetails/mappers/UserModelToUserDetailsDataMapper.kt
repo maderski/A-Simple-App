@@ -7,9 +7,15 @@ import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDet
 class UserModelToUserDetailsDataMapper {
     operator fun invoke(
         userModel: UserModel,
-        onViewLocationClick: (companyName: String, latitude: String?, longitude: String?) -> Unit
+        onViewLocationClick: (
+            userId: String,
+            companyName: String,
+            latitude: String?,
+            longitude: String?
+        ) -> Unit
     ) : UserDetailsData =
         UserDetailsData(
+            userId = userModel.id.toString(),
             userName = userModel.username,
             name = userModel.name,
             phone = userModel.phone,

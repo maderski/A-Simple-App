@@ -104,6 +104,7 @@ private fun UserDetailsScreenContent(
                 isEnabled = data.isViewLocationCTAEnabled
             ) {
                 data.onViewLocationClick.invoke(
+                    data.userId,
                     data.businessName,
                     data.locationLat,
                     data.locationLng
@@ -118,6 +119,7 @@ private fun UserDetailsScreenContent(
 fun PreviewUserDetailsScreenContent() {
     UserDetailsScreenContent(
         data = UserDetailsData(
+            userId = "1",
             userName = "JohnDoe123",
             name = "John Doe",
             phone = "867-5309",
@@ -132,7 +134,7 @@ fun PreviewUserDetailsScreenContent() {
             locationLat = null,
             isViewLocationCTAEnabled = true,
             viewLocationCTAText = "View on Map",
-            onViewLocationClick = { _, _, _ -> }
+            onViewLocationClick = { _, _, _, _ -> }
         )
     )
 }

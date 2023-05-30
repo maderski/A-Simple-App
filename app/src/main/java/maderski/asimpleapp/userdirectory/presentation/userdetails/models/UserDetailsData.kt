@@ -1,6 +1,7 @@
 package maderski.asimpleapp.userdirectory.presentation.userdetails.models
 
 data class UserDetailsData(
+    val userId: String,
     val userName: String,
     val name: String,
     val phone: String,
@@ -15,5 +16,10 @@ data class UserDetailsData(
     val imageUrl: String?,
     val viewLocationCTAText: String,
     val isViewLocationCTAEnabled: Boolean,
-    val onViewLocationClick: (companyName: String, latitude: String?, longitude: String?) -> Unit,
+    val onViewLocationClick: (
+        userId: String,
+        companyName: String,
+        latitude: String?,
+        longitude: String?
+    ) -> Unit,
 )

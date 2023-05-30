@@ -27,13 +27,14 @@ fun Navigation() {
                 }
             )
         ) { entry ->
-            UserDetailsScreen(userId = entry.arguments?.getString("id"), navController = navController)
+            val userId = entry.arguments?.getString("id")
+            UserDetailsScreen(userId = userId, navController = navController)
             BackHandler(enabled = true) {
                 navController.navigate(ScreenNav.UserListScreen.route)
             }
         }
         composable(
-            route = ScreenNav.UserLocationScreen.route + "/{companyName}/{lat}/{lng}"
+            route = ScreenNav.UserLocationScreen.route + "/{id}/{companyName}/{lat}/{lng}"
         ) { entry ->
             UserMapLocationScreen(
                 companyName = entry.arguments?.getString("companyName"),
@@ -41,7 +42,8 @@ fun Navigation() {
                 locationLng = entry.arguments?.getString("lng"),
             )
             BackHandler(enabled = true) {
-                navController.navigate(ScreenNav.UserListScreen.route)
+                val id = entry.arguments?.getString("id")
+                navController.navigate(ScreenNav.UserDetailScreen.route + "/$id")
             }
         }
     }

@@ -7,6 +7,7 @@ sealed interface NavigationEvent {
     object ToUserList : NavigationEvent
     data class ToUserDetails(val userId: String) : NavigationEvent
     data class ToUserMapLocation(
+        val userId: String,
         val companyName: String,
         val latitude: String,
         val longitude: String,
@@ -22,6 +23,7 @@ fun State<NavigationEvent?>.navigateToDestination(navController: NavController) 
             is NavigationEvent.ToUserMapLocation ->
                 navController.navigate(
                     ScreenNav.UserLocationScreen.withArgs(
+                        event.userId,
                         event.companyName,
                         event.latitude,
                         event.longitude
