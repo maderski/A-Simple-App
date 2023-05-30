@@ -64,7 +64,7 @@ fun UserCardComponent(
                     modifier = Modifier
                         .fillMaxWidth(),
                     text = data.companyName,
-                    fontSize = 12.sp,
+                    fontSize = 14.sp,
                     color = Color.Gray
                 )
             }
