@@ -5,7 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import maderski.asimpleapp.userdirectory.domain.userlocation.UserMapLocationScreen
+import maderski.asimpleapp.userdirectory.presentation.userlocation.UserMapLocationScreen
 import maderski.asimpleapp.userdirectory.navigation.UserScreen
 import maderski.asimpleapp.userdirectory.presentation.userdetails.UserDetailsScreen
 import maderski.asimpleapp.userdirectory.presentation.userlist.UserListScreen

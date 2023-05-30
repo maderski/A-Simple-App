@@ -1,4 +1,4 @@
-package maderski.asimpleapp.userdirectory.domain.userlocation
+package maderski.asimpleapp.userdirectory.presentation.userlocation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

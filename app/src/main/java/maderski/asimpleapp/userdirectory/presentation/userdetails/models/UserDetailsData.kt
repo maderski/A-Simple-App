@@ -5,5 +5,11 @@ data class UserDetailsData(
     val name: String,
     val phone: String,
     val email: String,
-    val imageUrl: String?
+    val address: String,
+    val website: String,
+    val businessName: String,
+    val businessCatchPhrase: String,
+    val businessStrategy: String,
+    val imageUrl: String?,
+    val onViewLocationClick: () -> Unit,
 )
