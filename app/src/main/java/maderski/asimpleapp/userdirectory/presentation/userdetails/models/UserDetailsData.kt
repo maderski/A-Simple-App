@@ -10,6 +10,10 @@ data class UserDetailsData(
     val businessName: String,
     val businessCatchPhrase: String,
     val businessStrategy: String,
+    val locationLat: String?,
+    val locationLng: String?,
     val imageUrl: String?,
-    val onViewLocationClick: () -> Unit,
+    val viewLocationCTAText: String,
+    val isViewLocationCTAEnabled: Boolean,
+    val onViewLocationClick: (companyName: String, latitude: String?, longitude: String?) -> Unit,
 )

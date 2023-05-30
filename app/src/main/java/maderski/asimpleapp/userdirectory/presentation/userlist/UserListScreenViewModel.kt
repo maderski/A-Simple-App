@@ -6,6 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import maderski.asimpleapp.navigation.NavigationEvent
 import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userlist.mappers.UserModelSetToUserCardDataMapper
 import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserCardData
@@ -25,6 +26,8 @@ class UserListScreenViewModel @Inject constructor(
             val message: String,
         ) : UIState
     }
+
+    val navEvent = MutableStateFlow<NavigationEvent?>(null)
 
     val screenState: StateFlow<UIState>
         get() = _screenState
@@ -47,7 +50,7 @@ class UserListScreenViewModel @Inject constructor(
     }
 
     private fun selectUser(id: Int) {
-        println("User ID: $id")
+        navEvent.value = NavigationEvent.ToUserDetails(id.toString())
     }
 
     private fun showErrorScreen(message: String?) {
