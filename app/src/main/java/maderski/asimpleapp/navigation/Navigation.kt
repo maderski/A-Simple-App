@@ -9,6 +9,7 @@ import maderski.asimpleapp.userdirectory.presentation.userlocation.UserMapLocati
 import maderski.asimpleapp.userdirectory.navigation.UserScreen
 import maderski.asimpleapp.userdirectory.presentation.userdetails.UserDetailsScreen
 import maderski.asimpleapp.userdirectory.presentation.userlist.UserListScreen
+import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserListScreenData
 
 @Composable
 fun Navigation() {
@@ -19,7 +20,7 @@ fun Navigation() {
             route = ScreenNavigation.UserDirectory.navRoute,
         ) {
             composable(UserScreen.UserListScreen.route) {
-                UserListScreen()
+                UserListScreen(data = UserListScreenData(cardListData = emptyList()))
             }
             composable(UserScreen.UserDetailScreen.route) {
                 UserDetailsScreen()
