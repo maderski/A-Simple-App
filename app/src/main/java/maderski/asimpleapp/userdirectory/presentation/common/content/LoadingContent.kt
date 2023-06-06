@@ -1,4 +1,4 @@
-package maderski.asimpleapp.common.content
+package maderski.asimpleapp.userdirectory.presentation.common.content
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

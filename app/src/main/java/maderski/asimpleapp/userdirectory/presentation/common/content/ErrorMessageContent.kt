@@ -1,4 +1,4 @@
-package maderski.asimpleapp.common.content
+package maderski.asimpleapp.userdirectory.presentation.common.content
 
 import android.R
 import androidx.compose.foundation.Image

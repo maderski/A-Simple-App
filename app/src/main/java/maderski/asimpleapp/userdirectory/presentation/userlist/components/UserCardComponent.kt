@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import maderski.asimpleapp.R
-import maderski.asimpleapp.common.component.UrlImageWithDefaultComponent
+import maderski.asimpleapp.userdirectory.presentation.common.component.UrlImageWithDefaultComponent
 import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserCardData
 
 @OptIn(ExperimentalMaterial3Api::class)

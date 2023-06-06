@@ -1,4 +1,4 @@
-package maderski.asimpleapp.common.component
+package maderski.asimpleapp.userdirectory.presentation.common.component
 
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image

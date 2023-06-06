@@ -17,8 +17,8 @@ import com.google.maps.android.compose.MapProperties
 import com.google.maps.android.compose.MapUiSettings
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.rememberCameraPositionState
-import maderski.asimpleapp.common.content.ErrorMessageContent
-import maderski.asimpleapp.common.content.LoadingContent
+import maderski.asimpleapp.userdirectory.presentation.common.content.ErrorMessageContent
+import maderski.asimpleapp.userdirectory.presentation.common.content.LoadingContent
 import maderski.asimpleapp.userdirectory.presentation.userlocation.UserMapLocationViewModel.*
 
 @Composable

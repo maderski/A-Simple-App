@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import maderski.asimpleapp.R
-import maderski.asimpleapp.common.component.UrlImageWithDefaultComponent
+import maderski.asimpleapp.userdirectory.presentation.common.component.UrlImageWithDefaultComponent
 
 @Composable
 fun UserImageCircleComponent(

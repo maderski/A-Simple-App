@@ -1,4 +1,4 @@
-package maderski.asimpleapp.common.component
+package maderski.asimpleapp.userdirectory.presentation.common.component
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding

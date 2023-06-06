@@ -13,9 +13,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import maderski.asimpleapp.navigation.navigateToDestination
-import maderski.asimpleapp.common.component.LogoComponent
-import maderski.asimpleapp.common.content.ErrorMessageContent
-import maderski.asimpleapp.common.content.LoadingContent
+import maderski.asimpleapp.userdirectory.presentation.common.component.LogoComponent
+import maderski.asimpleapp.userdirectory.presentation.common.content.ErrorMessageContent
+import maderski.asimpleapp.userdirectory.presentation.common.content.LoadingContent
 import maderski.asimpleapp.userdirectory.presentation.userlist.UserListScreenViewModel.*
 import maderski.asimpleapp.userdirectory.presentation.userlist.components.UserCardListComponent
 import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserCardData
