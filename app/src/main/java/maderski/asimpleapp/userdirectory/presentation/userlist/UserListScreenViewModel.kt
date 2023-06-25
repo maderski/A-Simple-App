@@ -33,11 +33,12 @@ class UserListScreenViewModel @Inject constructor(
         get() = _screenState
     private val _screenState = MutableStateFlow<UIState>(UIState.Loading)
 
-    init {
+    fun loadUsers() {
         viewModelScope.launch {
             getAllUsers()
         }
     }
+
     private suspend fun getAllUsers() {
         val result = userRepository.getAllUsers()
         result.onSuccess { allUsers ->

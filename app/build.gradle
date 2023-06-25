@@ -86,8 +86,12 @@ dependencies {
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
     // Google Maps
     implementation "com.google.android.gms:play-services-maps:18.1.0"
-    // Test
+    // Unit Tests
     testImplementation 'junit:junit:4.13.2'
+    testImplementation "io.mockk:mockk:1.13.5"
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
+    // Android Instrument Tests
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
