@@ -1,9 +1,9 @@
-package maderski.asimpleapp.userdirectory.domain.repository
+package maderski.asimpleapp.userdirectory.data.repository
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import maderski.asimpleapp.userdirectory.domain.mappers.UserToUserModelMapper
-import maderski.asimpleapp.userdirectory.domain.models.UserModel
+import maderski.asimpleapp.userdirectory.data.mappers.UserToUserModelMapper
+import maderski.asimpleapp.userdirectory.data.models.UserModel
 import maderski.asimpleapp.userdirectory.service.UserApi
 import javax.inject.Inject
 

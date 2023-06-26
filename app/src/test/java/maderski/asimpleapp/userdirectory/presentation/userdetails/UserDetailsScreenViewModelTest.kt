@@ -11,7 +11,7 @@ import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
-import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
+import maderski.asimpleapp.userdirectory.data.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userdetails.mappers.UserModelToUserDetailsDataMapper
 import org.junit.Assert.*
 import org.junit.Before

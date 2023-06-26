@@ -1,22 +1,17 @@
 package maderski.asimpleapp.userdirectory.presentation.userlist
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.compose.runtime.collectAsState
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.FlowCollector
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
-import maderski.asimpleapp.userdirectory.domain.models.UserModel
-import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
+import maderski.asimpleapp.userdirectory.data.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userlist.mappers.UserModelSetToUserCardDataMapper
 import org.junit.Before
 import org.junit.Rule

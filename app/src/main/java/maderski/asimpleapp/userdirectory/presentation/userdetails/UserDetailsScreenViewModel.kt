@@ -2,13 +2,12 @@ package maderski.asimpleapp.userdirectory.presentation.userdetails
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.android.gms.maps.model.LatLng
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import maderski.asimpleapp.navigation.NavigationEvent
-import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
+import maderski.asimpleapp.userdirectory.data.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userdetails.mappers.UserModelToUserDetailsDataMapper
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDetailsData
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.ViewLocationClickedData
