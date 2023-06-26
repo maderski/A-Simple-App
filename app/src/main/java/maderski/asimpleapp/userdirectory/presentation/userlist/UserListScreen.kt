@@ -33,6 +33,8 @@ fun UserListScreen(
     LaunchedEffect(navEvent.value) {
         navEvent.navigateToDestination(navController)
     }
+
+    viewModel.loadUsers()
 }
 
 @Composable
