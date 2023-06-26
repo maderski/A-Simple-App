@@ -1,4 +1,4 @@
-package maderski.asimpleapp.userdirectory.domain.models
+package maderski.asimpleapp.userdirectory.data.models
 
 data class UserModel(
     val id: Int,

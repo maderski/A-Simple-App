@@ -1,7 +1,7 @@
 package maderski.asimpleapp.userdirectory.presentation.userdetails.mappers
 
-import maderski.asimpleapp.userdirectory.domain.models.AddressModel
-import maderski.asimpleapp.userdirectory.domain.models.UserModel
+import maderski.asimpleapp.userdirectory.data.models.AddressModel
+import maderski.asimpleapp.userdirectory.data.models.UserModel
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.UserDetailsData
 import maderski.asimpleapp.userdirectory.presentation.userdetails.models.ViewLocationClickedData
 

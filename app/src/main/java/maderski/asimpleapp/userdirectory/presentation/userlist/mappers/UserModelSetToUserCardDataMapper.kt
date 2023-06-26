@@ -1,6 +1,6 @@
 package maderski.asimpleapp.userdirectory.presentation.userlist.mappers
 
-import maderski.asimpleapp.userdirectory.domain.models.UserModel
+import maderski.asimpleapp.userdirectory.data.models.UserModel
 import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserCardData
 
 class UserModelSetToUserCardDataMapper {

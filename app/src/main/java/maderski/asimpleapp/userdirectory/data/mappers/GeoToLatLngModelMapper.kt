@@ -1,6 +1,6 @@
-package maderski.asimpleapp.userdirectory.domain.mappers
+package maderski.asimpleapp.userdirectory.data.mappers
 
-import maderski.asimpleapp.userdirectory.domain.models.LatLngModel
+import maderski.asimpleapp.userdirectory.data.models.LatLngModel
 import maderski.asimpleapp.userdirectory.service.models.Geo
 
 class GeoToLatLngModelMapper {

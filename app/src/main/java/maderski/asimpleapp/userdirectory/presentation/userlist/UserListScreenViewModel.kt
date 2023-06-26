@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import maderski.asimpleapp.navigation.NavigationEvent
-import maderski.asimpleapp.userdirectory.domain.repository.UserRepository
+import maderski.asimpleapp.userdirectory.data.repository.UserRepository
 import maderski.asimpleapp.userdirectory.presentation.userlist.mappers.UserModelSetToUserCardDataMapper
 import maderski.asimpleapp.userdirectory.presentation.userlist.models.UserCardData
 import javax.inject.Inject
