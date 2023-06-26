@@ -10,6 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    env:
+      MAPS_API_KEY: "PLACEHOLDER_API_KEY"
 
     steps:
     - uses: actions/checkout@v3
@@ -24,10 +27,10 @@ jobs:
       run: chmod +x gradlew
     
     - name: Run unit tests
-      run: ./gradlew testDebugUnitTest -PmapsApiKey="PLACEHOLDER_API_KEY"
+      run: ./gradlew testDebugUnitTest -PmapsApiKey="$MAPS_API_KEY"
     
     - name: Build debug APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug -PmapsApiKey="$MAPS_API_KEY"
     
     - name: Build release APK
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleRelease -PmapsApiKey="$MAPS_API_KEY"
