@@ -35,14 +35,15 @@ internal class UserListScreenViewModelTest {
     private val userCardMapper: UserModelSetToUserCardDataMapper = mockk()
     private val viewModel: UserListScreenViewModel = UserListScreenViewModel(repository, userCardMapper)
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
     fun setUp() {
         Dispatchers.setMain(dispatcher)
-        coEvery { userCardMapper.invoke(any(), any()) }.returns(listOf())
+        every { userCardMapper.invoke(any(), any()) }.returns(listOf())
     }
 
     @Test
-    fun `When getting all users showing user list state is shown`() {
+    fun `When getting all users is finished, the ShowingUserList state is shown`() {
         viewModel.loadUsers()
         dispatcher.scheduler.advanceUntilIdle()
         assert(viewModel.screenState.value is UserListScreenViewModel.UIState.ShowingUserList)
@@ -50,7 +51,7 @@ internal class UserListScreenViewModelTest {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
-    fun `When getting all users loading state is showing before user list state is shown`() =
+    fun `When getting all users Loading state is shown before ShowingUserList state is shown`() =
         runTest {
             val states = mutableListOf<UserListScreenViewModel.UIState>()
             val job = launch {
