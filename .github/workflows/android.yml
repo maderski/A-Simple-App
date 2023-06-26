@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      MAPS_API_KEY: "PLACEHOLDER_API_KEY"
+      MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
 
     steps:
     - uses: actions/checkout@v3
