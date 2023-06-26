@@ -24,7 +24,7 @@ jobs:
         cache: gradle
         
     - name: Set API key placeholder
-      run: sed -i 's/<MAPS_API_KEY>/${{ secrets.MAPS_API_KEY }}/' app/src/main/AndroidManifest.xml
+      run: sed -i 's/<MAPS_API_KEY>/$MAPS_API_KEY/' app/src/main/AndroidManifest.xml
     
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
