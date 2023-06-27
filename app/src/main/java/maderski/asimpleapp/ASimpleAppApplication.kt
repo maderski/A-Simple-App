@@ -1,4 +1,4 @@
-package maderski.asimpleapp.application
+package maderski.asimpleapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,4 +1,4 @@
-package maderski.asimpleapp.navigation
+package maderski.asimpleapp.userdirectory.navigation
 
 sealed class ScreenNav(val route: String) {
     object UserListScreen : ScreenNav("user_list")

@@ -1,4 +1,4 @@
-package maderski.asimpleapp
+package maderski.asimpleapp.userdirectory.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
