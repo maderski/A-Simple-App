@@ -1,4 +1,4 @@
-package maderski.asimpleapp.ui.theme
+package maderski.asimpleapp.userdirectory.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

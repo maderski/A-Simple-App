@@ -1,4 +1,4 @@
-package maderski.asimpleapp.navigation
+package maderski.asimpleapp.userdirectory.navigation
 
 import androidx.compose.runtime.State
 import androidx.navigation.NavController

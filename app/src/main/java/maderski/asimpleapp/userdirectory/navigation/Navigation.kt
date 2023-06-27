@@ -1,4 +1,4 @@
-package maderski.asimpleapp.navigation
+package maderski.asimpleapp.userdirectory.navigation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable

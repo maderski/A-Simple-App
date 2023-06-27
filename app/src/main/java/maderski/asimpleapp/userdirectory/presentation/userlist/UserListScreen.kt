@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import maderski.asimpleapp.navigation.navigateToDestination
+import maderski.asimpleapp.userdirectory.navigation.navigateToDestination
 import maderski.asimpleapp.userdirectory.presentation.common.component.LogoComponent
 import maderski.asimpleapp.userdirectory.presentation.common.content.ErrorMessageContent
 import maderski.asimpleapp.userdirectory.presentation.common.content.LoadingContent

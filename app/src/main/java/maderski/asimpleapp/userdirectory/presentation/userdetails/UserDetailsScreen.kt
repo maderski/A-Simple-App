@@ -25,7 +25,7 @@ import androidx.navigation.NavController
 import maderski.asimpleapp.userdirectory.presentation.common.component.PrimaryButtonComponent
 import maderski.asimpleapp.userdirectory.presentation.common.content.ErrorMessageContent
 import maderski.asimpleapp.userdirectory.presentation.common.content.LoadingContent
-import maderski.asimpleapp.navigation.navigateToDestination
+import maderski.asimpleapp.userdirectory.navigation.navigateToDestination
 import maderski.asimpleapp.userdirectory.presentation.userdetails.UserDetailsScreenViewModel.*
 import maderski.asimpleapp.userdirectory.presentation.userdetails.components.UserDetailsInfoComponent
 import maderski.asimpleapp.userdirectory.presentation.userdetails.components.UserImageCircleComponent
