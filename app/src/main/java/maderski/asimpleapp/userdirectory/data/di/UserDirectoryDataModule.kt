@@ -14,7 +14,7 @@ import maderski.asimpleapp.userdirectory.service.UserApi
 
 @Module
 @InstallIn(ViewModelComponent::class)
-class UserDirectoryDomainModule {
+class UserDirectoryDataModule {
     @Provides
     fun provideCompanyModelMapper() = CompanyToCompanyModelMapper()
 
